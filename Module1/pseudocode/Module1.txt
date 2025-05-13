@@ -1,5 +1,3 @@
-start
-
 Class Module1
 
     Method main(arguments)
@@ -8,5 +6,3 @@ Class Module1
         Print "Street Address: 123 Main Street"
         Print "City: Salt Lake City"
         Print "Zip Code: 12345"
-
-end
