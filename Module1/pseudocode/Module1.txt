@@ -1,0 +1,12 @@
+start
+
+Class Module1
+
+    Method main(arguments)
+        Print "First name: John"
+        Print "Last name: Smith"
+        Print "Street Address: 123 Main Street"
+        Print "City: Salt Lake City"
+        Print "Zip Code: 12345"
+
+end
