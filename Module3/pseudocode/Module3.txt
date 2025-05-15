@@ -1,0 +1,20 @@
+Class Module3
+
+    Method main(arguments)
+        PROMPT user to enter weekly income
+        READ weeklyIncome
+
+        IF weeklyIncome < 500 THEN
+            taxRate = 0.10
+        ELSE IF weeklyIncome < 1500 THEN
+            taxRate = 0.15
+        ELSE IF weeklyIncome < 2500 THEN
+            taxRate = 0.20
+        ELSE
+            taxRate = 0.30
+        
+        taxWithholdings = weeklyIncome * taxRate
+        
+        OUTPUT "Weekly income: " + weeklyIncome
+        OUTPUT "Tax rate: " + taxRate
+        OUTPUT "Tax withholdings: " + taxWithholdings
