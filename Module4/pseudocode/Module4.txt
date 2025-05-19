@@ -1,0 +1,37 @@
+Class Module4
+
+    INITIALIZE total to 0
+    INITIALIZE average to 0
+    INITIALIZE maximum to NEGATIVE_INFINITY
+    INITIALIZE minimum to POSITIVE_INFINITY
+    INITIALIZE counter to 0
+
+    WHILE counter < 5 DO
+        PROMPT user to enter a number
+        READ userInput
+
+        IF userInput < 1 THEN
+            OUTPUT "Input must be > 0"
+            CONTINUE to next iteration
+        END IF
+
+        ADD userInput to total
+
+        IF userInput > maximum THEN
+            SET maximum = userInput
+        END IF
+
+        IF userInput < minimum THEN
+            SET minimum = userInput
+        END IF
+
+        INCREMENT counter by 1
+    END WHILE
+
+    OUTPUT "************"
+    OUTPUT "Total: " + total
+    SET average = total / 5
+    OUTPUT "Average: " + average
+    OUTPUT "Maximum: " + maximum
+    OUTPUT "Minimum: " + minimum
+    OUTPUT "Interest: " + (total * 0.2)
