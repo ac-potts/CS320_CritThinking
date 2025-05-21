@@ -1,0 +1,22 @@
+Class Module5
+
+    INITIALIZE integer array weeklyTemps = [65, 71, 73, 70, 85, 82, 82]
+    INITIALIZE string array daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+    OUTPUT "Enter a day of the week. Enter 'week' for all days:"
+
+    READ userInput from user
+    TRIM any extra whitespace from userInput
+
+    IF userInput equals "week" (ignoring case) THEN
+        FOR each index i from 0 to length of daysOfWeek - 1 DO
+            DISPLAY daysOfWeek[i] + ": " + weeklyTemps[i]
+        END FOR
+    ELSE
+        FOR each index i from 0 to length of daysOfWeek - 1 DO
+            IF daysOfWeek[i] equals userInput (ignoring case) THEN
+                DISPLAY daysOfWeek[i] + ": " + weeklyTemps[i]
+                EXIT loop
+            END IF
+        END FOR
+    END IF
