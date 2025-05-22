@@ -1,0 +1,93 @@
+CLASS Automobile
+
+    PRIVATE VARIABLES:
+        make : string
+        model : string
+        color : string
+        year : integer
+        mileage : integer
+
+    METHOD: DefaultConstructor()
+        TRY
+            SET make to empty string
+            SET model to empty string
+            SET color to empty string
+            SET year to 0
+            SET mileage to 0
+        CATCH exception
+            PRINT "Error in default constructor" and exception message
+        END TRY
+    END METHOD
+
+    METHOD: ParameterizedConstructor(inputMake, inputModel, inputColor, inputYear, inputMileage)
+        TRY
+            SET make to inputMake
+            SET model to inputModel
+            SET color to inputColor
+            SET year to inputYear
+            SET mileage to inputMileage
+        CATCH exception
+            PRINT "Error in parameterized constructor" and exception message
+        END TRY
+    END METHOD
+
+    METHOD: addVehicle(inputMake, inputModel, inputColor, inputYear, inputMileage) RETURNS string
+        TRY
+            SET make to inputMake
+            SET model to inputModel
+            SET color to inputColor
+            SET year to inputYear
+            SET mileage to inputMileage
+            RETURN "Vehicle successfully added"
+        CATCH exception
+            RETURN "Failed to add vehicle" and exception message
+        END TRY
+    END METHOD
+
+    METHOD: listVehicle() RETURNS array of string
+        TRY
+            RETURN array:
+                "Make: " + make,
+                "Model: " + model,
+                "Color: " + color,
+                "Year: " + year,
+                "Mileage: " + mileage
+        CATCH exception
+            RETURN array with "Failed to list vehicle" and exception message
+        END TRY
+    END METHOD
+
+    METHOD: removeVehicle(inputMake, inputModel, inputColor, inputYear) RETURNS string
+        TRY
+            IF make equals inputMake (ignore case)
+               AND model equals inputModel (ignore case)
+               AND color equals inputColor (ignore case)
+               AND year equals inputYear
+            THEN
+                SET make to empty string
+                SET model to empty string
+                SET color to empty string
+                SET year to 0
+                SET mileage to 0
+                RETURN "Vehicle removed successfully."
+            ELSE
+                RETURN "Vehicle details do not match. Removal failed."
+        CATCH exception
+            RETURN "Error removing vehicle" and exception message
+        END TRY
+    END METHOD
+
+    METHOD: updateVehicle(inputMake, inputModel, inputColor, inputYear, inputMileage) RETURNS string
+        TRY
+            SET make to inputMake
+            SET model to inputModel
+            SET color to inputColor
+            SET year to inputYear
+            SET mileage to inputMileage
+            RETURN "Vehicle updated successfully."
+        CATCH exception
+            RETURN "Failed to update vehicle" and exception message
+        END TRY
+    END METHOD
+
+END CLASS
