@@ -9,6 +9,7 @@ public class Module3 {
 
         System.out.println("Enter your weekly income:");
         weeklyIncome = scnr.nextDouble();
+        scnr.close();
 
         if (weeklyIncome < 500) {
             taxRate = 0.10;

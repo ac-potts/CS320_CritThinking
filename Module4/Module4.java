@@ -13,6 +13,7 @@ public class Module4 {
         while (counter < 5) {
             System.out.println("Enter a value:");
             userInput = scnr.nextFloat();
+            scnr.close();
             if (userInput < 1) {
                 System.out.println("Input must be > 0");
                 continue;

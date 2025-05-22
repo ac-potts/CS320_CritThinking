@@ -1,3 +1,5 @@
+package Module5;
+
 import java.util.Scanner;
 
 public class Module5 {
@@ -10,6 +12,7 @@ public class Module5 {
 
         System.out.println("Enter a day of the week. Enter 'week' for all days:");
         userInput = scnr.next().trim();
+        scnr.close();
 
         if (userInput.equalsIgnoreCase("week")) {
             for (i = 0; i < daysOfWeek.length; ++i) {
