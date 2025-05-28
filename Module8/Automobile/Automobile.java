@@ -39,7 +39,7 @@ public class Automobile {
             this.color = color;
             this.year = year;
             this.mileage = mileage;
-            return "Vehicle successfully added";
+            return "Vehicle successfully added.";
         } catch (Exception e) {
             return "Failed to add vehicle: " + e.getMessage();
         }
